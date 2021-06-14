@@ -20,8 +20,8 @@ class App extends React.Component {
   }
   handleForm = (headers, body) => {
     this.setState({
-      Headers: headers,
-      Response: body,
+      Headers:JSON.stringify(headers),
+      Response: JSON.stringify(body),
     });
   }
   render() {
