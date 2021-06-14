@@ -1,5 +1,11 @@
 # reesty
 
+## lab 27
+
+![uml](assest/lab27.jpg)
+
+## lab 26
+
 ![uml](assest/lab26.jpg)
 
 to run the code enter inside directory resty
@@ -14,4 +20,4 @@ then
 
 open localhost in browser
 
-[more information about create react app](resty/README.md)
+[more information about create react app](README1.md)
