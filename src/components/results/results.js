@@ -7,8 +7,8 @@ class results extends React.Component {
         console.log("child : ", this.props)
         return (
             <section className="resultSec">
-              <ReactJson src={this.props.results.Headers}/>
-              <ReactJson src={this.props.results.Response}/>
+              <ReactJson src={ this.props.results.Headers} theme="monokai"/>
+              <ReactJson src={this.props.results.Response} theme="monokai"/>
             </section>
           );
 }

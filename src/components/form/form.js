@@ -46,6 +46,7 @@ class Form extends React.Component{
             );
             console.log('result',result);
              let { headers, body } = result;
+            
             this.props.handler(headers, body, this.state);
         
     } catch (error) {
