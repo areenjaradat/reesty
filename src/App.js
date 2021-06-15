@@ -1,10 +1,14 @@
 
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Form from './components/form/form';
 import Results from './components/results/results';
+import History from './components/history/history';
+
+import { If, Then } from 'react-if';
+ 
 
 class App extends React.Component {
 
@@ -14,14 +18,14 @@ class App extends React.Component {
       url: '' , 
       method: '', 
       count: 0 ,
-      Headers: {} ,
-      Response: {},
+      results: {},
+      show:false
     };
   }
-  handleForm = (headers, body) => {
+  handleForm = (results,state) => {
     this.setState({
-      Headers:headers,
-      Response: body,
+      results: results,
+      show:true
     });
   }
   render() {
@@ -29,10 +33,17 @@ class App extends React.Component {
       <>
         <Header />
         <main>
-          <Form handler={this.handleForm} />
-          
-          <Results results={this.state} />
          
+          <Form handler={this.handleForm} />
+          <div className="styling">
+          <History/>
+          <If condition={this.state.show}>
+              <Then>
+          <Results results={this.state} />
+          </Then>
+          </If>
+         
+          </div>
         </main>
         <Footer />
       </>
