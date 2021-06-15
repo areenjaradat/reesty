@@ -15,13 +15,13 @@ class App extends React.Component {
       method: '', 
       count: 0 ,
       Headers: {} ,
-      Response: [],
+      Response: {},
     };
   }
   handleForm = (headers, body) => {
     this.setState({
-      Headers:JSON.stringify(headers),
-      Response: JSON.stringify(body),
+      Headers:headers,
+      Response: body,
     });
   }
   render() {
