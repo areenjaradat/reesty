@@ -1,5 +1,11 @@
 # reesty
 
+## lab 28
+
+[deployed](https://main--jolly-saha-1eeaf6.netlify.app)
+
+![uml](assest/lab28.jpg)
+
 ## lab 27
 
 [deployed](https://main--jolly-saha-1eeaf6.netlify.app)

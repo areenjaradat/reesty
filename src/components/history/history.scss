@@ -1,0 +1,36 @@
+table {
+    margin-left: 2%;
+    border-collapse: collapse;
+    width: 40%;
+    border: 1px solid #222;
+   
+   
+    box-shadow: 5px 10px #888888;
+    thead {
+      border-bottom: 3px solid black;
+    }
+    th,td{
+      border-bottom: 1px solid black;
+    }
+  
+    tr {
+      height: 2rem;
+    }
+    .fwidth {
+      text-align: center;
+      border-right: 1px solid #222;
+      font-weight: 700;
+    }
+    #hisGET {
+      background-color: rgb(114, 125, 228);
+    }
+    #hisPOST {
+      background-color: rgb(122, 241, 106);
+    }
+    #hisPUT {
+      background-color: rgb(228, 213, 82);
+    }
+    #hisDELETE {
+      background-color: rgb(228, 114, 114);
+    }
+  }
