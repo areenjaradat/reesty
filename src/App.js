@@ -19,7 +19,8 @@ class App extends React.Component {
       method: '', 
       count: 0 ,
       results: {},
-      show:false
+      show:false,
+      isHistory:false
     };
   }
   handleForm = (results,state) => {
@@ -27,6 +28,14 @@ class App extends React.Component {
       results: results,
       show:true
     });
+    // let resu=localStorage.getItem('headers');
+    //      let object=JSON.parse(resu);
+    //      console.log(object)
+    //      if(object){
+    //       this.setState({
+    //         isHistory:false
+    //       });
+    //      }
   }
   render() {
     return (
@@ -36,7 +45,12 @@ class App extends React.Component {
          
           <Form handler={this.handleForm} />
           <div className="styling">
-          <History/>
+          {/* <If condition={this.state.isHistory}>
+              <Then> */}
+              <History/>
+          {/* </Then>
+          </If> */}
+         
           <If condition={this.state.show}>
               <Then>
           <Results results={this.state} />
