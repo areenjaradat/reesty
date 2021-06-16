@@ -10,13 +10,13 @@ import {Route , Switch} from 'react-router-dom' ;
 const Main = () =>{
    return (
      <>
-     <BrowserRouter>
+    
        <Switch>
              <Route exact path="/" component={Home}  />
              <Route path="/help" component={Help} />
              <Route path="/history" component={History} />
        </Switch>
-       </BrowserRouter>
+     
      </>
 
 
