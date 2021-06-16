@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import{NavLink} from 'react-router-dom' ;
 import './header.scss';
 const Header=()=>{
     return (
@@ -10,13 +10,13 @@ const Header=()=>{
             <nav>
        <ul>
         <li>
-           <a  href="/">Home</a>
+           <NavLink exact  to="/">Home</NavLink>
         </li>
         <li>
-           <a href="/history">History</a>
+           <NavLink to="/history">History</NavLink>
         </li>
         <li>
-           <a href="/help">Help</a>
+           <NavLink to="/help">Help</NavLink>
         </li>
        </ul>
     </nav>
