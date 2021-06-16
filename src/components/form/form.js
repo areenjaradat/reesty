@@ -1,7 +1,7 @@
 import React from 'react';
 import './form.scss';
 import { If, Then } from 'react-if';
-const superagent = require('superagent');
+
 
 
 class Form extends React.Component{
@@ -12,7 +12,8 @@ class Form extends React.Component{
             method:'',
             body: '',
             isLoading:false,
-            isClicked:false
+            isClicked:false,
+            isHistory:false,
         }
     }
     handleURL = (e) => {
@@ -41,8 +42,7 @@ class Form extends React.Component{
         console.log('event',e.target.url.value)
         console.log('event body',e.target.body.value)
         e.preventDefault();
-        let url1=e.target.url.value;
-        let method1=e.target.method.value;
+        
         this.setState({
             url: e.target.url.value,
             method: this.state.method,
@@ -70,12 +70,14 @@ class Form extends React.Component{
        if(data){
   if(!localStorage.getItem("headers")){
       localStorage.setItem("headers",JSON.stringify([this.state]));
+  
   }else{
       let localData = JSON.parse(localStorage.getItem("headers"));
       const found = localData.find(elem=>{
-          return (elem.url == this.state.url && elem.method==this.state.method)
+          return (elem.url === this.state.url && elem.method===this.state.method)
       });
       if(!found){
+       
           localData.push(this.state);
           localStorage.setItem("headers" , JSON.stringify(localData))
       }

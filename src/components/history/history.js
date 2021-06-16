@@ -45,6 +45,12 @@ import './history.scss';
 let resu=localStorage.getItem('headers');
          let object=JSON.parse(resu);
 
+         if(!object){
+         object=[{url:'no url yet',
+         method:'no method'
+        }]
+         }
+
 function History({ props }) {
     return (
       <section id="history">
@@ -56,6 +62,7 @@ function History({ props }) {
             </tr>
           </thead>
           <tbody>
+              
             {object.map((val, i) => {
               return (
                 <tr
