@@ -14,6 +14,7 @@ class Form extends React.Component{
             isLoading:false,
             isClicked:false,
             isHistory:false,
+            data:{}
         }
     }
     handleURL = (e) => {
@@ -66,7 +67,7 @@ class Form extends React.Component{
 
             const data=await raw.json()
             this.props.handler(data,this.state);
-
+            this.setState({ data: data }) 
        if(data){
   if(!localStorage.getItem("headers")){
       localStorage.setItem("headers",JSON.stringify([this.state]));
@@ -86,6 +87,7 @@ class Form extends React.Component{
  
 
 }
+
 this.setState({ isLoading: false })      
         
     } catch (error) {

@@ -4,3 +4,21 @@ header {
     color: white;
     padding: 1%;
 }
+nav{
+   clear: both;
+    display: flex;
+
+    ul{
+        display: inline-block;
+    }
+    ul li{
+        
+        display:inline;
+        margin: 2%;
+        
+    }
+    ul li a{
+        text-decoration: none;
+        color:rgb(114, 125, 228);
+    }
+}
