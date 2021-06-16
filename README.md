@@ -1,5 +1,13 @@
 # reesty
 
+## lab 29
+
+[deployed](https://main--jolly-saha-1eeaf6.netlify.app)
+
+![uml](assest/lab29.jpg)
+
+if move to history page you have to reload the page
+
 ## lab 28
 
 [deployed](https://main--jolly-saha-1eeaf6.netlify.app)
